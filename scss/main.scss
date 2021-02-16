@@ -1,0 +1,61 @@
+@import 'config';
+@import 'utilities';
+
+// General Styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at center, $bg-gradient);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: #fff;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+}
+
+// Title container
+#title-container {
+  width: 47%;
+  height: auto;
+  border: 2px solid $header-outline-color;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+
+  #title {
+    .title-item {
+      font-size: 20px;
+      margin-top: -7px;
+    }
+    margin-bottom: -7px;
+  }
+
+  #scoreboard {
+    height: 5rem;
+    width: 7rem;
+    background: #fff;
+    border-radius: 10px;
+    color: $score-text-color;
+
+    .score-title {
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    .actual-score {
+      color: $dark-text-color;
+      font-size: 50px;
+      margin-top: -5px;
+    }
+  }
+}
