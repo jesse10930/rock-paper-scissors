@@ -25,37 +25,130 @@ h6 {
 
 // Title container
 #title-container {
-  width: 47%;
+  width: 50%;
   height: auto;
   border: 2px solid $header-outline-color;
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
 
-  #title {
-    .title-item {
-      font-size: 20px;
-      margin-top: -7px;
-    }
-    margin-bottom: -7px;
-  }
-
   #scoreboard {
-    height: 5rem;
-    width: 7rem;
-    background: #fff;
+    height: 7rem;
+    width: 8rem;
+    background: rgba(250, 250, 250, 255);
     border-radius: 10px;
     color: $score-text-color;
 
     .score-title {
-      font-size: 12px;
+      font-size: 18px;
       margin-top: 8px;
     }
 
     .actual-score {
       color: $dark-text-color;
-      font-size: 50px;
-      margin-top: -5px;
+      font-size: 75px;
+      margin-top: -10px;
     }
   }
+}
+
+// Choices Container
+#choices-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  #pentagon {
+    z-index: -1;
+  }
+
+  #scissors-icon {
+    margin-top: -325px;
+  }
+
+  #paper-icon {
+    margin-top: -10px;
+    margin-left: 300px;
+  }
+
+  #spock-icon {
+    margin-top: -96px;
+    margin-right: 300px;
+  }
+
+  #rock-icon {
+    margin-top: 76px;
+    margin-left: 200px;
+  }
+
+  #lizard-icon {
+    margin-top: -96px;
+    margin-right: 200px;
+  }
+
+  #scissors-icon::before {
+    background-color: rgba(232, 161, 12, 255);
+    box-shadow: 0px 5px rgba(199, 105, 24, 255);
+  }
+  #paper-icon::before {
+    background-color: rgba(68, 100, 246, 255);
+    box-shadow: 0px 5px rgba(42, 72, 195, 255);
+  }
+  #spock-icon::before {
+    background-color: rgba(80, 189, 210, 255);
+    box-shadow: 0px 5px rgba(44, 142, 171, 255);
+  }
+  #rock-icon::before {
+    background-color: rgba(223, 64, 95, 255);
+    box-shadow: 0px 5px rgba(147, 29, 57, 255);
+  }
+  #lizard-icon::before {
+    background-color: rgba(142, 93, 228, 255);
+    box-shadow: 0px 5px rgba(92, 57, 163, 255);
+  }
+}
+
+// Rules
+#rules-button {
+  height: 3rem;
+  width: 9rem;
+  border: 2px solid $header-outline-color;
+  border-radius: 15px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#rules-card {
+  background-color: rgba(250, 250, 250, 255);
+  height: auto;
+  width: 25%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #rules-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #rules-title {
+      color: $dark-text-color;
+    }
+  }
+}
+
+// Game Play
+#game-play-container {
+  border: 2px solid red;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
