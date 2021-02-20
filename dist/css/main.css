@@ -77,19 +77,39 @@ h6 {
   #choices-container #pentagon {
     z-index: -1; }
   #choices-container #scissors-icon {
-    margin-top: -325px; }
+    margin-top: -325px;
+    transition: 0.5s all ease-in-out;
+    cursor: pointer; }
+    #choices-container #scissors-icon:hover {
+      transform: scale(1.5); }
   #choices-container #paper-icon {
     margin-top: -10px;
-    margin-left: 300px; }
+    margin-left: 300px;
+    transition: 0.5s all ease-in-out;
+    cursor: pointer; }
+    #choices-container #paper-icon:hover {
+      transform: scale(1.5); }
   #choices-container #spock-icon {
     margin-top: -96px;
-    margin-right: 300px; }
+    margin-right: 300px;
+    transition: 0.5s all ease-in-out;
+    cursor: pointer; }
+    #choices-container #spock-icon:hover {
+      transform: scale(1.5); }
   #choices-container #rock-icon {
     margin-top: 76px;
-    margin-left: 200px; }
+    margin-left: 200px;
+    transition: 0.5s all ease-in-out;
+    cursor: pointer; }
+    #choices-container #rock-icon:hover {
+      transform: scale(1.5); }
   #choices-container #lizard-icon {
     margin-top: -96px;
-    margin-right: 200px; }
+    margin-right: 200px;
+    transition: 0.5s all ease-in-out;
+    cursor: pointer; }
+    #choices-container #lizard-icon:hover {
+      transform: scale(1.5); }
   #choices-container #scissors-icon::before {
     background-color: #e8a10c;
     box-shadow: 0px 5px #c76918; }
@@ -117,25 +137,79 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center; }
-
-#rules-card {
-  background-color: #fafafa;
-  height: auto;
-  width: 25%;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  #rules-card #rules-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    #rules-card #rules-header #rules-title {
-      color: #3b4363; }
+  #rules-button:hover {
+    background-color: #fafafa;
+    color: #3b4363;
+    cursor: pointer; }
 
 #game-play-container {
-  border: 2px solid red;
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: space-around; }
+  #game-play-container #your-pick-container #scissors-icon {
+    zoom: 175%; }
+  #game-play-container #your-pick-container #scissors-icon::before {
+    background-color: #e8a10c;
+    box-shadow: 0px 5px #c76918; }
+  #game-play-container #outcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 70px;
+    padding-right: 70px; }
+    #game-play-container #outcome-container #your-outcome {
+      padding-bottom: 10px; }
+    #game-play-container #outcome-container #play-again {
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      color: #3b4363;
+      height: 2rem;
+      font-size: medium;
+      border-radius: 5px;
+      border: none; }
+  #game-play-container #house-pick-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    #game-play-container #house-pick-container #house-pick-circle {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      background: #172240; }
+    #game-play-container #house-pick-container #rock-icon {
+      zoom: 175%; }
+    #game-play-container #house-pick-container #rock-icon::before {
+      background-color: #df405f;
+      box-shadow: 0px 5px #931d39; }
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2; }
+  #overlay #rules-card {
+    background-color: #fafafa;
+    height: auto;
+    width: 25%;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    position: relative;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #overlay #rules-card #rules-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      #overlay #rules-card #rules-header #rules-title {
+        color: #3b4363; }
+      #overlay #rules-card #rules-header img {
+        cursor: pointer; }

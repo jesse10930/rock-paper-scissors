@@ -18,6 +18,17 @@
 </head>
 
 <body>
+  <!-- Rules Overlay -->
+  <div id="overlay">
+    <div id="rules-card" class="container">
+      <div id="rules-header">
+        <h1 id="rules-title">Rules</h1>
+        <img src="images/icon-close.svg" alt="close" onClick="rulesOff()">
+      </div>
+      <img src="images/image-rules-bonus.svg" alt="rules">
+    </div>
+  </div>
+
   <!-- Title and Scoreboard -->
   <div id="title-container" class="container">
     <div id="title">
@@ -25,7 +36,6 @@
     </div>
     <div id="scoreboard" class="text-center">
       <p class="text-center score-title">score</p>
-      <!-- perhaps the first React component here for the actual score -->
       <p class="actual-score">0</p>
     </div>
   </div>
@@ -35,55 +45,54 @@
     <div id="pentagon">
       <img src="images/bg-pentagon.svg" alt="bg-pentagon">
     </div>
-    <div id="scissors-icon" class="icon-container icon-container-scissors">
+    <div id="scissors-icon" class="icon-container icon-container-scissors" onClick="iconClick('scissors')">
       <img src="images/icon-scissors.svg" alt="scissors">
     </div>
-    <div id="paper-icon" class="icon-container icon-container-paper">
+    <div id="paper-icon" class="icon-container icon-container-paper" onClick="iconClick('paper')">
       <img src="images/icon-paper.svg" alt="paper">
     </div>
-    <div id="spock-icon" class="icon-container icon-container-spock">
+    <div id="spock-icon" class="icon-container icon-container-spock" onClick="iconClick('spock')">
       <img src="images/icon-spock.svg" alt="spock">
     </div>
-    <div id="rock-icon" class="icon-container icon-container-rock">
+    <div id="rock-icon" class="icon-container icon-container-rock"  onClick="iconClick('rock')">
       <img src="images/icon-rock.svg" alt="rock">
     </div>
-    <div id="lizard-icon" class="icon-container icon-container-lizard">
+    <div id="lizard-icon" class="icon-container icon-container-lizard" onClick="iconClick('lizard')">
       <img src="images/icon-lizard.svg" alt="lizard">
     </div>
   </div>
 
-  <!-- Rules -->
-  <!-- <div id="rules-button">
+  <!-- Rules Button-->
+  <div id="rules-button" onClick="rulesOn()">
     <p class="text-center">rules</p>
   </div>
-  <div id="rules-card" class="container">
-    <div id="rules-header">
-      <h1 id="rules-title">Rules</h1>
-      <img src="images/icon-close.svg" alt="close">
-    </div>
-    <img src="images/image-rules-bonus.svg" alt="rules">
-  </div> -->
 
   <!-- Game Play -->
-  <div id="game-play-container" class="container text-center">
+  <!-- <div id="game-play-container" class="container text-center">
     <div id="your-pick-container">
       <h3 id="your-pick-title">you picked</h3>
-      <div id="your-pick-icon"></div>
+      <div id="scissors-icon" class="icon-container icon-container-scissors">
+        <img src="images/icon-scissors.svg" alt="scissors">
+      </div>
     </div>
-    <!-- <div id="outcome-container">
+    <div id="outcome-container">
       <h1 id="your-outcome">you lose</h1>
-      <div id="play-again">play again</div>
-    </div> -->
+      <button id="play-again">PLAY AGAIN</button>
+    </div>
     <div id="house-pick-container">
       <h3 id="house-pick-title">the house picked</h3>
-      <div id="house-picked-circle"></div>
-      <div id="house-pick-icon"></div>
+      <div id="house-pick-circle"></div>
+      <div id="rock-icon" class="icon-container icon-container-rock">
+        <img src="images/icon-rock.svg" alt="rock">
+      </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/jesse10930" target="_blank">Jesse Ronda</a>.
   </div> -->
+
+  <script src="js/app.js"></script>
 </body>
 </html>
