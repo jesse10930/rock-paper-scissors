@@ -28,6 +28,15 @@
     top: -18px;
     position: absolute;
     z-index: -1; }
+  .icon-container::after {
+    border-radius: 50%;
+    content: '';
+    width: 100%;
+    height: 100%;
+    padding: 150px;
+    position: absolute;
+    z-index: -2;
+    background: radial-gradient(circle at center, #2b3858 40%, #263554 40%, #263554 55%, #223351 55%); }
 
 #scissors-icon::before {
   background-color: #e8a10c;
@@ -53,8 +62,13 @@
   margin: 0;
   padding: 0; }
 
+html {
+  height: 100%; }
+
 body {
-  background: radial-gradient(circle at center, #1f3756, #141539);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: radial-gradient(circle at top, #1f3756, #141539);
   font-family: 'Barlow Semi Condensed', sans-serif;
   color: #fff; }
 

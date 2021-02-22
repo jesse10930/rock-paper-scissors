@@ -34,6 +34,23 @@
     position: absolute;
     z-index: -1;
   }
+
+  &::after {
+    border-radius: 50%;
+    content: '';
+    width: 100%;
+    height: 100%;
+    padding: 150px;
+    position: absolute;
+    z-index: -2;
+    background: radial-gradient(
+      circle at center,
+      rgba(43, 56, 88, 255) 40%,
+      rgba(38, 53, 84, 255) 40%,
+      rgba(38, 53, 84, 255) 55%,
+      rgba(34, 51, 81, 255) 55%
+    );
+  }
 }
 
 // Icon Colors

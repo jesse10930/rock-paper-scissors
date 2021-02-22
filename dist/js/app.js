@@ -160,10 +160,14 @@ const iconClick = (value) => {
     document.getElementById('icon-house').style.display = 'flex';
   }, 1500);
 
-  // Transition Outcome Container in and Display new Score(after 1s)
+  // Transition Outcome Container in, Display new Score(after 1s), Highlight Winning Icon
   setTimeout(() => {
     document.getElementById('outcome-container').style.display = 'flex';
     document.querySelector('.actual-score').innerText = newScore;
+    if (message === 'YOU WIN!') {
+    }
+    if (message === 'You Lose') {
+    }
   }, 3000);
 };
 
