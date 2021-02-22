@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -36,7 +35,7 @@
     </div>
     <div id="scoreboard" class="text-center">
       <p class="text-center score-title">score</p>
-      <p class="actual-score">0</p>
+      <p class="actual-score"></p>
     </div>
   </div>
 
@@ -68,25 +67,21 @@
   </div>
 
   <!-- Game Play -->
-  <!-- <div id="game-play-container" class="container text-center">
+  <div id="game-play-container" class="container text-center">
     <div id="your-pick-container">
       <h3 id="your-pick-title">you picked</h3>
-      <div id="scissors-icon" class="icon-container icon-container-scissors">
-        <img src="images/icon-scissors.svg" alt="scissors">
-      </div>
+      <div id="icon-player"></div>
     </div>
     <div id="outcome-container">
-      <h1 id="your-outcome">you lose</h1>
-      <button id="play-again">PLAY AGAIN</button>
+      <h1 id="your-outcome"></h1>
+      <button id="play-again" onClick="playAgainClick()">PLAY AGAIN</button>
     </div>
     <div id="house-pick-container">
       <h3 id="house-pick-title">the house picked</h3>
       <div id="house-pick-circle"></div>
-      <div id="rock-icon" class="icon-container icon-container-rock">
-        <img src="images/icon-rock.svg" alt="rock">
-      </div>
+      <div id="icon-house"></div>
     </div>
-  </div> -->
+  </div>
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

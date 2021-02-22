@@ -29,6 +29,26 @@
     position: absolute;
     z-index: -1; }
 
+#scissors-icon::before {
+  background-color: #e8a10c;
+  box-shadow: 0px 5px #c76918; }
+
+#paper-icon::before {
+  background-color: #4464f6;
+  box-shadow: 0px 5px #2a48c3; }
+
+#spock-icon::before {
+  background-color: #50bdd2;
+  box-shadow: 0px 5px #2c8eab; }
+
+#rock-icon::before {
+  background-color: #df405f;
+  box-shadow: 0px 5px #931d39; }
+
+#lizard-icon::before {
+  background-color: #8e5de4;
+  box-shadow: 0px 5px #5c39a3; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -73,7 +93,10 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  transition: opacity 1s ease-out;
+  opacity: 1;
+  height: auto; }
   #choices-container #pentagon {
     z-index: -1; }
   #choices-container #scissors-icon {
@@ -110,21 +133,6 @@ h6 {
     cursor: pointer; }
     #choices-container #lizard-icon:hover {
       transform: scale(1.5); }
-  #choices-container #scissors-icon::before {
-    background-color: #e8a10c;
-    box-shadow: 0px 5px #c76918; }
-  #choices-container #paper-icon::before {
-    background-color: #4464f6;
-    box-shadow: 0px 5px #2a48c3; }
-  #choices-container #spock-icon::before {
-    background-color: #50bdd2;
-    box-shadow: 0px 5px #2c8eab; }
-  #choices-container #rock-icon::before {
-    background-color: #df405f;
-    box-shadow: 0px 5px #931d39; }
-  #choices-container #lizard-icon::before {
-    background-color: #8e5de4;
-    box-shadow: 0px 5px #5c39a3; }
 
 #rules-button {
   height: 3rem;
@@ -144,19 +152,16 @@ h6 {
 
 #game-play-container {
   width: 60%;
-  display: flex;
-  justify-content: space-around; }
-  #game-play-container #your-pick-container #scissors-icon {
+  justify-content: space-around;
+  display: none; }
+  #game-play-container #your-pick-container div[id$='-icon'] {
     zoom: 175%; }
-  #game-play-container #your-pick-container #scissors-icon::before {
-    background-color: #e8a10c;
-    box-shadow: 0px 5px #c76918; }
   #game-play-container #outcome-container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 70px;
-    padding-right: 70px; }
+    padding-right: 70px;
+    display: none; }
     #game-play-container #outcome-container #your-outcome {
       padding-bottom: 10px; }
     #game-play-container #outcome-container #play-again {
@@ -165,7 +170,8 @@ h6 {
       height: 2rem;
       font-size: medium;
       border-radius: 5px;
-      border: none; }
+      border: none;
+      cursor: pointer; }
   #game-play-container #house-pick-container {
     display: flex;
     flex-direction: column;
@@ -175,12 +181,12 @@ h6 {
       height: 100px;
       width: 100px;
       border-radius: 50%;
-      background: #172240; }
-    #game-play-container #house-pick-container #rock-icon {
+      background: #172240;
+      margin-bottom: 40px; }
+    #game-play-container #house-pick-container div[id$='-icon'] {
       zoom: 175%; }
-    #game-play-container #house-pick-container #rock-icon::before {
-      background-color: #df405f;
-      box-shadow: 0px 5px #931d39; }
+    #game-play-container #house-pick-container #icon-house {
+      display: none; }
 
 #overlay {
   position: fixed;

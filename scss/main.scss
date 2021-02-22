@@ -60,6 +60,13 @@ h6 {
   justify-content: center;
   align-items: center;
 
+  transition: opacity 1s ease-out;
+  opacity: 1;
+  height: auto;
+  // opacity: 0;
+  // height: 0;
+  // overflow: hidden;
+
   #pentagon {
     z-index: -1;
   }
@@ -117,27 +124,6 @@ h6 {
       transform: scale(1.5);
     }
   }
-
-  #scissors-icon::before {
-    background-color: rgba(232, 161, 12, 255);
-    box-shadow: 0px 5px rgba(199, 105, 24, 255);
-  }
-  #paper-icon::before {
-    background-color: rgba(68, 100, 246, 255);
-    box-shadow: 0px 5px rgba(42, 72, 195, 255);
-  }
-  #spock-icon::before {
-    background-color: rgba(80, 189, 210, 255);
-    box-shadow: 0px 5px rgba(44, 142, 171, 255);
-  }
-  #rock-icon::before {
-    background-color: rgba(223, 64, 95, 255);
-    box-shadow: 0px 5px rgba(147, 29, 57, 255);
-  }
-  #lizard-icon::before {
-    background-color: rgba(142, 93, 228, 255);
-    box-shadow: 0px 5px rgba(92, 57, 163, 255);
-  }
 }
 
 // Rules Button
@@ -163,25 +149,21 @@ h6 {
 // Game Play
 #game-play-container {
   width: 60%;
-  display: flex;
   justify-content: space-around;
+  display: none;
 
   #your-pick-container {
-    #scissors-icon {
+    div[id$='-icon'] {
       zoom: 175%;
-    }
-    #scissors-icon::before {
-      background-color: rgba(232, 161, 12, 255);
-      box-shadow: 0px 5px rgba(199, 105, 24, 255);
     }
   }
 
   #outcome-container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 70px;
     padding-right: 70px;
+    display: none;
 
     #your-outcome {
       padding-bottom: 10px;
@@ -194,6 +176,7 @@ h6 {
       font-size: medium;
       border-radius: 5px;
       border: none;
+      cursor: pointer;
     }
   }
 
@@ -208,15 +191,15 @@ h6 {
       width: 100px;
       border-radius: 50%;
       background: rgba(23, 34, 64, 255);
+      margin-bottom: 40px;
     }
 
-    #rock-icon {
+    div[id$='-icon'] {
       zoom: 175%;
     }
 
-    #rock-icon::before {
-      background-color: rgba(223, 64, 95, 255);
-      box-shadow: 0px 5px rgba(147, 29, 57, 255);
+    #icon-house {
+      display: none;
     }
   }
 }
