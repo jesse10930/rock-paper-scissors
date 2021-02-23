@@ -163,10 +163,19 @@ const iconClick = (value) => {
   // Transition Outcome Container in, Display new Score(after 1s), Highlight Winning Icon
   setTimeout(() => {
     document.getElementById('outcome-container').style.display = 'flex';
+    setTimeout(() => {
+      document.getElementById('outcome-container').style.opacity = 1;
+      document.getElementById('outcome-container').style.transform = 'scale(1)';
+    }, 0);
     document.querySelector('.actual-score').innerText = newScore;
+
     if (message === 'YOU WIN!') {
+      document.getElementById('icon-player').childNodes[0].className +=
+        ' winner';
     }
+
     if (message === 'You Lose') {
+      document.getElementById('icon-house').childNodes[0].className += ' loser';
     }
   }, 3000);
 };
@@ -182,4 +191,8 @@ const playAgainClick = () => {
   document.getElementById('icon-house').style.display = 'none';
 
   document.getElementById('outcome-container').style.display = 'none';
+
+  document.getElementById('outcome-container').style.opacity = 0;
+
+  document.getElementById('outcome-container').style.transform = 'scale(0)';
 };
