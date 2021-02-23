@@ -91,6 +91,10 @@ h5,
 h6 {
   text-transform: uppercase; }
 
+button {
+  border: none;
+  outline: none; }
+
 #title-container {
   width: 50%;
   height: auto;
@@ -161,14 +165,18 @@ h6 {
 #rules-button {
   height: 3rem;
   width: 9rem;
+  color: #fff;
   border: 2px solid #606e85;
+  background-color: Transparent;
   border-radius: 15px;
   position: fixed;
   bottom: 20px;
   right: 20px;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 18px; }
   #rules-button:hover {
     background-color: #fafafa;
     color: #3b4363;
@@ -230,7 +238,7 @@ h6 {
   #overlay #rules-card {
     background-color: #fafafa;
     height: auto;
-    width: 25%;
+    width: 330px;
     border-radius: 10px;
     padding-bottom: 50px;
     position: relative;
@@ -245,5 +253,7 @@ h6 {
       justify-content: space-between; }
       #overlay #rules-card #rules-header #rules-title {
         color: #3b4363; }
-      #overlay #rules-card #rules-header img {
-        cursor: pointer; }
+      #overlay #rules-card #rules-header #close-rules-button {
+        background-color: Transparent; }
+        #overlay #rules-card #rules-header #close-rules-button img {
+          cursor: pointer; }

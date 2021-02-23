@@ -1,6 +1,5 @@
 // Check Local Storage On Page Load
 document.addEventListener('DOMContentLoaded', () => {
-  console.log(sessionStorage);
   let existingScore = sessionStorage.getItem('RPSSL_Score');
   if (!existingScore) {
     sessionStorage.setItem('RPSSL_Score', 0);
@@ -11,14 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Turn rules overlay on
-const rulesOn = () => {
+document.getElementById('rules-button').addEventListener('click', () => {
   document.getElementById('overlay').style.display = 'block';
-};
+});
 
 // Turn rules overlay off
-const rulesOff = () => {
+document.getElementById('close-rules-button').addEventListener('click', () => {
   document.getElementById('overlay').style.display = 'none';
-};
+});
 
 // Get Random Value
 const getRandNum = () => {
@@ -129,70 +128,90 @@ const getNewScore = (message) => {
 };
 
 // Icon Click
-const iconClick = (value) => {
-  let iconArr = ['scissors', 'paper', 'spock', 'rock', 'lizard'];
-  let houseVal = iconArr[getRandNum()];
-  let playerVal = value;
-  let message = getMessage(playerVal, houseVal);
-  let newScore = getNewScore(message);
+const iconButtons = document.querySelectorAll('.icon-container');
+iconButtons.forEach((clickedIcon) => {
+  clickedIcon.addEventListener('click', (e) => {
+    let playerVal;
+    if (e.target.value) {
+      playerVal = e.target.value;
+    } else {
+      playerVal = e.target.alt;
+    }
+    let iconArr = ['scissors', 'paper', 'spock', 'rock', 'lizard'];
+    let houseVal = iconArr[getRandNum()];
+    // let playerVal = value;
+    let message = getMessage(playerVal, houseVal);
+    let newScore = getNewScore(message);
+    const iconPlayer = document.getElementById('icon-player');
+    const iconHouse = document.getElementById('icon-house');
+    const yourOutcome = document.getElementById('your-outcome');
+    const choicesCont = document.getElementById('choices-container');
+    const gamePlayCont = document.getElementById('game-play-container');
+    const outcomeCont = document.getElementById('outcome-container');
 
-  // Add Player Icon to HTML
-  document.getElementById('icon-player').innerHTML = createIconHTML(playerVal);
+    // Add Player Icon to HTML
+    iconPlayer.innerHTML = createIconHTML(playerVal);
 
-  // Add House Icon to HTML
-  document.getElementById('icon-house').innerHTML = createIconHTML(houseVal);
+    // Add House Icon to HTML
+    iconHouse.innerHTML = createIconHTML(houseVal);
 
-  // Add Message to HTML
-  document.getElementById('your-outcome').innerText = message;
+    // Add Message to HTML
+    yourOutcome.innerText = message;
 
-  // Save New Score to Session Storage
-  sessionStorage.setItem('RPSSL_Score', newScore);
+    // Save New Score to Session Storage
+    sessionStorage.setItem('RPSSL_Score', newScore);
 
-  // Transition Choices Container Out
-  document.getElementById('choices-container').style.display = 'none';
+    // Transition Choices Container Out
+    choicesCont.style.display = 'none';
 
-  // Transition Game Play Container In
-  document.getElementById('game-play-container').style.display = 'flex';
+    // Transition Game Play Container In
+    gamePlayCont.style.display = 'flex';
 
-  // Transition House Pick Circle Out and House Pick Icon In (after 1/2s)
-  setTimeout(() => {
-    document.getElementById('house-pick-circle').style.display = 'none';
-    document.getElementById('icon-house').style.display = 'flex';
-  }, 1500);
-
-  // Transition Outcome Container in, Display new Score(after 1s), Highlight Winning Icon
-  setTimeout(() => {
-    document.getElementById('outcome-container').style.display = 'flex';
+    // Transition House Pick Circle Out and House Pick Icon In (after 1/2s)
     setTimeout(() => {
-      document.getElementById('outcome-container').style.opacity = 1;
-      document.getElementById('outcome-container').style.transform = 'scale(1)';
-    }, 0);
-    document.querySelector('.actual-score').innerText = newScore;
+      document.getElementById('house-pick-circle').style.display = 'none';
+      iconHouse.style.display = 'flex';
+    }, 1500);
 
-    if (message === 'YOU WIN!') {
-      document.getElementById('icon-player').childNodes[0].className +=
-        ' winner';
-    }
+    // Transition Outcome Container in, Display new Score(after 1s), Highlight Winning Icon
+    setTimeout(() => {
+      outcomeCont.style.display = 'flex';
+      setTimeout(() => {
+        outcomeCont.style.opacity = 1;
+        outcomeCont.style.transform = 'scale(1)';
+      }, 0);
+      document.querySelector('.actual-score').innerText = newScore;
 
-    if (message === 'You Lose') {
-      document.getElementById('icon-house').childNodes[0].className += ' loser';
-    }
-  }, 3000);
-};
+      if (message === 'YOU WIN!') {
+        iconPlayer.childNodes[0].className += ' winner';
+      }
+
+      if (message === 'You Lose') {
+        iconHouse.childNodes[0].className += ' loser';
+      }
+    }, 3000);
+  });
+});
 
 // Click Play Again
-const playAgainClick = () => {
-  document.getElementById('choices-container').style.display = 'flex';
+document.getElementById('play-again').addEventListener('click', () => {
+  const choicesCont = document.getElementById('choices-container');
+  const gamePlayCont = document.getElementById('game-play-container');
+  const housePickCircle = document.getElementById('house-pick-circle');
+  const iconHouse = document.getElementById('icon-house');
+  const outcomeCont = document.getElementById('outcome-container');
 
-  document.getElementById('game-play-container').style.display = 'none';
+  choicesCont.style.display = 'flex';
 
-  document.getElementById('house-pick-circle').style.display = 'flex';
+  gamePlayCont.style.display = 'none';
 
-  document.getElementById('icon-house').style.display = 'none';
+  housePickCircle.style.display = 'flex';
 
-  document.getElementById('outcome-container').style.display = 'none';
+  iconHouse.style.display = 'none';
 
-  document.getElementById('outcome-container').style.opacity = 0;
+  outcomeCont.style.display = 'none';
 
-  document.getElementById('outcome-container').style.transform = 'scale(0)';
-};
+  outcomeCont.style.opacity = 0;
+
+  outcomeCont.style.transform = 'scale(0)';
+});

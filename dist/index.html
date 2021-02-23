@@ -22,7 +22,9 @@
     <div id="rules-card" class="container">
       <div id="rules-header">
         <h1 id="rules-title">Rules</h1>
-        <img src="images/icon-close.svg" alt="close" onClick="rulesOff()">
+        <button id="close-rules-button">
+          <img src="images/icon-close.svg" alt="close">
+        </button>
       </div>
       <img src="images/image-rules-bonus.svg" alt="rules">
     </div>
@@ -44,27 +46,27 @@
     <div id="pentagon">
       <img src="images/bg-pentagon.svg" alt="bg-pentagon">
     </div>
-    <div id="scissors-icon" class="icon-container icon-container-scissors" onClick="iconClick('scissors')">
+    <button id="scissors-icon" class="icon-container icon-container-scissors" value='scissors'>
       <img src="images/icon-scissors.svg" alt="scissors">
-    </div>
-    <div id="paper-icon" class="icon-container icon-container-paper" onClick="iconClick('paper')">
+    </button>
+    <button id="paper-icon" class="icon-container icon-container-paper" value="paper">
       <img src="images/icon-paper.svg" alt="paper">
-    </div>
-    <div id="spock-icon" class="icon-container icon-container-spock" onClick="iconClick('spock')">
+    </button>
+    <button id="spock-icon" class="icon-container icon-container-spock" value="spock">
       <img src="images/icon-spock.svg" alt="spock">
-    </div>
-    <div id="rock-icon" class="icon-container icon-container-rock"  onClick="iconClick('rock')">
+    </button>
+    <button id="rock-icon" class="icon-container icon-container-rock"  value="rock">
       <img src="images/icon-rock.svg" alt="rock">
-    </div>
-    <div id="lizard-icon" class="icon-container icon-container-lizard" onClick="iconClick('lizard')">
+    </button>
+    <button id="lizard-icon" class="icon-container icon-container-lizard" value="lizard">
       <img src="images/icon-lizard.svg" alt="lizard">
-    </div>
+    </button>
   </div>
 
   <!-- Rules Button-->
-  <div id="rules-button" onClick="rulesOn()">
+  <button id="rules-button">
     <p class="text-center">rules</p>
-  </div>
+  </button>
 
   <!-- Game Play -->
   <div id="game-play-container" class="container text-center">
@@ -74,7 +76,7 @@
     </div>
     <div id="outcome-container">
       <h1 id="your-outcome"></h1>
-      <button id="play-again" onClick="playAgainClick()">PLAY AGAIN</button>
+      <button id="play-again">PLAY AGAIN</button>
     </div>
     <div id="house-pick-container">
       <h3 id="house-pick-title">the house picked</h3>
