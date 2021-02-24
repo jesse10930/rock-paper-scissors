@@ -257,3 +257,93 @@ button {
         background-color: Transparent; }
         #overlay #rules-card #rules-header #close-rules-button img {
           cursor: pointer; }
+
+@media (max-width: 800px) {
+  * {
+    margin: 0;
+    padding: 0; }
+  html {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw; }
+  body {
+    height: 100vh;
+    width: 100vw; }
+  #overlay #rules-card {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    #overlay #rules-card #rules-header {
+      height: 80%;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: space-between;
+      justify-content: space-between; }
+  #rules-button {
+    bottom: 5%;
+    right: 40%; }
+  .attribution {
+    display: none; }
+  #title-container {
+    height: 4rem;
+    width: 80%; }
+    #title-container #title img {
+      height: 100%; }
+    #title-container #scoreboard {
+      height: 100%;
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-content: center; }
+      #title-container #scoreboard .score-title {
+        font-size: 12px; }
+      #title-container #scoreboard .actual-score {
+        font-size: 40px; }
+  #game-play-container {
+    justify-content: space-between; }
+    #game-play-container #your-pick-container {
+      display: flex; }
+      #game-play-container #your-pick-container #your-pick-title {
+        position: absolute;
+        bottom: -20%;
+        left: 12%; }
+    #game-play-container #outcome-container {
+      display: none;
+      align-items: center; }
+      #game-play-container #outcome-container #your-outcome {
+        position: absolute;
+        bottom: -110%;
+        width: 100%; }
+      #game-play-container #outcome-container #play-again {
+        position: absolute;
+        width: 140%;
+        bottom: -130%;
+        right: -20%; }
+    #game-play-container #house-pick-container #house-pick-title {
+      position: absolute;
+      bottom: -20%;
+      right: 4%; }
+    #game-play-container #house-pick-container #house-pick-circle {
+      position: absolute;
+      bottom: 0;
+      right: 8%; } }
+
+@media (max-width: 500px) {
+  * {
+    margin: 0;
+    padding: 0; }
+  #choices-container {
+    zoom: 60%; }
+  #game-play-container {
+    zoom: 60%;
+    justify-content: space-evenly; }
+  #rules-button {
+    bottom: 5%;
+    right: 30%; } }
