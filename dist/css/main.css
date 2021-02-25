@@ -204,7 +204,7 @@ button {
       font-family: 'Barlow Semi Condensed', sans-serif;
       color: #3b4363;
       height: 2rem;
-      font-size: medium;
+      font-size: large;
       border-radius: 5px;
       border: none;
       cursor: pointer; }
@@ -267,6 +267,7 @@ button {
     height: 100vh;
     width: 100vw; }
   body {
+    overflow: hidden;
     height: 100vh;
     width: 100vw; }
   #overlay #rules-card {
@@ -286,8 +287,10 @@ button {
       align-items: space-between;
       justify-content: space-between; }
   #rules-button {
+    position: absolute;
     bottom: 5%;
-    right: 40%; }
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); }
   .attribution {
     display: none; }
   #title-container {
@@ -307,33 +310,47 @@ button {
       #title-container #scoreboard .actual-score {
         font-size: 40px; }
   #game-play-container {
-    justify-content: space-between; }
+    display: flex;
+    justify-content: space-around; }
     #game-play-container #your-pick-container {
-      display: flex; }
+      position: absolute;
+      right: 60%; }
       #game-play-container #your-pick-container #your-pick-title {
         position: absolute;
-        bottom: -20%;
-        left: 12%; }
+        bottom: -30%;
+        left: 26%; }
     #game-play-container #outcome-container {
       display: none;
-      align-items: center; }
+      height: 200px;
+      align-items: center;
+      position: absolute;
+      top: 500px; }
       #game-play-container #outcome-container #your-outcome {
         position: absolute;
-        bottom: -110%;
+        bottom: 125px;
         width: 100%; }
       #game-play-container #outcome-container #play-again {
         position: absolute;
         width: 140%;
-        bottom: -130%;
-        right: -20%; }
-    #game-play-container #house-pick-container #house-pick-title {
+        height: 25%;
+        font-size: 24px; }
+    #game-play-container #house-pick-container {
+      height: 330px;
+      width: 170px;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
       position: absolute;
-      bottom: -20%;
-      right: 4%; }
-    #game-play-container #house-pick-container #house-pick-circle {
-      position: absolute;
-      bottom: 0;
-      right: 8%; } }
+      left: 60%; }
+      #game-play-container #house-pick-container #house-pick-circle {
+        position: absolute;
+        top: 120px;
+        left: 40px; } }
+
+@media (max-width: 600px) {
+  #game-play-container #outcome-container {
+    position: absolute;
+    top: 320px; } }
 
 @media (max-width: 500px) {
   * {
@@ -342,8 +359,9 @@ button {
   #choices-container {
     zoom: 60%; }
   #game-play-container {
-    zoom: 60%;
-    justify-content: space-evenly; }
+    zoom: 60%; }
+    #game-play-container #outcome-container {
+      position: absolute;
+      top: 450px; }
   #rules-button {
-    bottom: 5%;
-    right: 30%; } }
+    zoom: 60%; } }

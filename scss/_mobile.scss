@@ -12,7 +12,7 @@
   }
 
   body {
-    // overflow: hidden;
+    overflow: hidden;
     height: 100vh;
     width: 100vw;
   }
@@ -40,8 +40,10 @@
   }
 
   #rules-button {
+    position: absolute;
     bottom: 5%;
-    right: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
   .attribution {
@@ -75,42 +77,60 @@
   }
 
   #game-play-container {
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
     #your-pick-container {
-      display: flex;
+      position: absolute;
+      right: 60%;
       #your-pick-title {
         position: absolute;
-        bottom: -20%;
-        left: 12%;
+        bottom: -30%;
+        left: 26%;
       }
     }
     #outcome-container {
       display: none;
+      height: 200px;
       align-items: center;
+      position: absolute;
+      top: 500px;
 
       #your-outcome {
         position: absolute;
-        bottom: -110%;
+        bottom: 125px;
         width: 100%;
       }
       #play-again {
         position: absolute;
         width: 140%;
-        bottom: -130%;
-        right: -20%;
+        height: 25%;
+        font-size: 24px;
       }
     }
     #house-pick-container {
-      #house-pick-title {
-        position: absolute;
-        bottom: -20%;
-        right: 4%;
-      }
+      height: 330px;
+      width: 170px;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      position: absolute;
+      left: 60%;
+
       #house-pick-circle {
         position: absolute;
-        bottom: 0;
-        right: 8%;
+        top: 120px;
+        left: 40px;
       }
+    }
+  }
+}
+
+// Small Tablets
+@media (max-width: 600px) {
+  #game-play-container {
+    #outcome-container {
+      position: absolute;
+      top: 320px;
     }
   }
 }
@@ -128,23 +148,14 @@
 
   #game-play-container {
     zoom: 60%;
-    justify-content: space-evenly;
 
-    // #your-pick-container {
-    //   position: absolute;
-    //   bottom: -20%;
-    //   left: 12%;
-    // }
-
-    // #house-pick-container {
-    //   position: absolute;
-    //   bottom: -20%;
-    //   right: 12%;
-    // }
+    #outcome-container {
+      position: absolute;
+      top: 450px;
+    }
   }
 
   #rules-button {
-    bottom: 5%;
-    right: 30%;
+    zoom: 60%;
   }
 }
