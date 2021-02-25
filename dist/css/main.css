@@ -183,13 +183,17 @@ button {
     cursor: pointer; }
 
 #game-play-container {
+  border: 2px red solid;
   width: 60%;
   justify-content: space-around;
   display: none;
   position: relative; }
-  #game-play-container #your-pick-container div[id$='-icon'] {
-    zoom: 175%; }
+  #game-play-container #your-pick-container {
+    border: 2px orange solid; }
+    #game-play-container #your-pick-container div[id$='-icon'] {
+      zoom: 175%; }
   #game-play-container #outcome-container {
+    border: 2px yellowgreen solid;
     flex-direction: column;
     justify-content: center;
     padding-left: 70px;
@@ -199,8 +203,10 @@ button {
     transform: scale(0);
     transition: 0.6s ease opacity, 0.6s ease transform; }
     #game-play-container #outcome-container #your-outcome {
+      border: 2px black solid;
       padding-bottom: 10px; }
     #game-play-container #outcome-container #play-again {
+      border: 2px indianred solid;
       font-family: 'Barlow Semi Condensed', sans-serif;
       color: #3b4363;
       height: 2rem;
@@ -209,19 +215,24 @@ button {
       border: none;
       cursor: pointer; }
   #game-play-container #house-pick-container {
+    border: 2px aqua solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    width: 11rem; }
     #game-play-container #house-pick-container #house-pick-circle {
+      border: 2px teal solid;
       height: 100px;
       width: 100px;
       border-radius: 50%;
       background: #172240;
       margin-bottom: 40px; }
     #game-play-container #house-pick-container div[id$='-icon'] {
+      border: 2px coral solid;
       zoom: 175%; }
     #game-play-container #house-pick-container #icon-house {
+      border: 2px pink solid;
       display: none; }
 
 #overlay {
