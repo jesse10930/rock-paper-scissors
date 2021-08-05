@@ -167,6 +167,13 @@
     .icon-container {
       height: 5rem;
       width: 5rem;
+
+      &::before {
+        height: 80%;
+        width: 80%;
+        top: -10px;
+        right: -7px
+      }
     }
   }
 
