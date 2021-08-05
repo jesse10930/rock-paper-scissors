@@ -363,25 +363,22 @@ button {
       position: absolute;
       margin: 0px;
       top: 350px;
-      left: 425px; }
+      left: 400px; }
     #choices-container #spock-icon {
       position: absolute;
       margin: 0px;
       top: 350px;
-      left: 125px; }
+      left: 100px; }
     #choices-container #rock-icon {
       position: absolute;
       margin: 0px;
       top: 525px;
-      left: 375px; }
+      left: 350px; }
     #choices-container #lizard-icon {
       position: absolute;
       margin: 0px;
       top: 525px;
-      left: 175px; }
-    #choices-container .icon-container {
-      height: 5rem;
-      width: 5rem; }
+      left: 150px; }
   #game-play-container {
     zoom: 60%; }
     #game-play-container #outcome-container {
