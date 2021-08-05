@@ -138,6 +138,14 @@
     #outcome-container {
       #play-again {
         z-index: 5;
+        opacity: 1;
+        background-color: rgb(239, 239, 239);
+      }
+    }
+
+    #house-pick-container {
+      #house-pick-title {
+        margin-bottom: 5px;
       }
     }
   }

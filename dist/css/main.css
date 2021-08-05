@@ -354,7 +354,11 @@ button {
     margin: 0;
     padding: 0; }
   #game-play-container #outcome-container #play-again {
-    z-index: 5; }
+    z-index: 5;
+    opacity: 1;
+    background-color: #efefef; }
+  #game-play-container #house-pick-container #house-pick-title {
+    margin-bottom: 5px; }
   #choices-container {
     zoom: 60%; }
     #choices-container #scissors-icon {
