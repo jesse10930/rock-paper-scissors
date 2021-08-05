@@ -355,26 +355,38 @@ button {
     padding: 0; }
   #choices-container {
     zoom: 60%; }
+    #choices-container #scissors-icon {
+      position: absolute;
+      margin: 0;
+      top: 250px; }
     #choices-container #paper-icon {
-      margin-top: 0px; }
+      position: absolute;
+      margin: 0px;
+      top: 350px;
+      left: 425px; }
     #choices-container #spock-icon {
-      margin-top: -80px; }
+      position: absolute;
+      margin: 0px;
+      top: 350px;
+      left: 125px; }
     #choices-container #rock-icon {
-      margin-top: 100px; }
+      position: absolute;
+      margin: 0px;
+      top: 525px;
+      left: 375px; }
     #choices-container #lizard-icon {
-      margin-top: -80px; }
+      position: absolute;
+      margin: 0px;
+      top: 525px;
+      left: 175px; }
     #choices-container .icon-container {
       height: 5rem;
       width: 5rem; }
-      #choices-container .icon-container::before {
-        height: 80%;
-        width: 80%;
-        top: -10px;
-        right: -7px; }
   #game-play-container {
     zoom: 60%; }
     #game-play-container #outcome-container {
       position: absolute;
-      top: 550px; }
+      top: 450px;
+      margin: 0px; }
   #rules-button {
     zoom: 60%; } }

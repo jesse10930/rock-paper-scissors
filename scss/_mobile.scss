@@ -148,32 +148,50 @@
   #choices-container {
     zoom: 60%;
 
+    #scissors-icon {
+      position: absolute;
+      margin: 0;
+      top: 250px;
+    }
+
     #paper-icon {
-      margin-top: 0px;
+      position: absolute;
+      margin: 0px;
+      top: 350px;
+      left: 425px;
     }
 
     #spock-icon {
-      margin-top: -80px;
+      position: absolute;
+      margin: 0px;
+      top: 350px;
+      left: 125px;
     }
 
     #rock-icon {
-      margin-top: 100px;
+      position: absolute;
+      margin: 0px;
+      top: 525px;
+      left: 375px;
     }
 
     #lizard-icon {
-      margin-top: -80px;
+      position: absolute;
+      margin: 0px;
+      top: 525px;
+      left: 175px;
     }
 
     .icon-container {
       height: 5rem;
       width: 5rem;
 
-      &::before {
-        height: 80%;
-        width: 80%;
-        top: -10px;
-        right: -7px
-      }
+      // &::before {
+      //   height: 80%;
+      //   width: 80%;
+      //   top: -10px;
+      //   right: -7px
+      // }
     }
   }
 
@@ -182,7 +200,8 @@
 
     #outcome-container {
       position: absolute;
-      top: 550px;
+      top: 450px;
+      margin: 0px;
     }
   }
 
