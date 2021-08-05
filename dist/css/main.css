@@ -358,7 +358,7 @@ button {
     opacity: 1;
     background-color: #efefef; }
   #game-play-container #house-pick-container #house-pick-title {
-    margin-bottom: 5px; }
+    margin-bottom: 10px; }
   #choices-container {
     zoom: 60%; }
     #choices-container #scissors-icon {
