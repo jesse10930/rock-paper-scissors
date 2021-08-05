@@ -78,7 +78,6 @@
   }
 
   #game-play-container {
-    // display: flex;
     justify-content: space-around;
 
     #your-pick-container {
@@ -128,21 +127,19 @@
   }
 }
 
-// Small Tablets
-// @media (max-width: 600px) {
-//   #game-play-container {
-//     #outcome-container {
-//       position: absolute;
-//       top: 320px;
-//     }
-//   }
-// }
-
 // Smart Phones
 @media (max-width: 500px) {
   * {
     margin: 0;
     padding: 0;
+  }
+
+  #game-play-container {
+    #outcome-container {
+      #play-again {
+        z-index: 5;
+      }
+    }
   }
 
   #choices-container {
@@ -158,40 +155,33 @@
       position: absolute;
       margin: 0px;
       top: 350px;
-      left: 390px;
+      left: 395px;
     }
 
     #spock-icon {
       position: absolute;
       margin: 0px;
       top: 350px;
-      left: 90px;
+      left: 95px;
     }
 
     #rock-icon {
       position: absolute;
       margin: 0px;
       top: 525px;
-      left: 340px;
+      left: 345px;
     }
 
     #lizard-icon {
       position: absolute;
       margin: 0px;
       top: 525px;
-      left: 140px;
+      left: 145px;
     }
 
     .icon-container {
       height: 5rem;
       width: 5rem;
-
-    //   &::before {
-    //     height: 80%;
-    //     width: 80%;
-    //     top: -10px;
-    //     right: -7px
-    //   }
     }
   }
 

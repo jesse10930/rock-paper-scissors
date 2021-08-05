@@ -353,6 +353,8 @@ button {
   * {
     margin: 0;
     padding: 0; }
+  #game-play-container #outcome-container #play-again {
+    z-index: 5; }
   #choices-container {
     zoom: 60%; }
     #choices-container #scissors-icon {
@@ -363,22 +365,22 @@ button {
       position: absolute;
       margin: 0px;
       top: 350px;
-      left: 390px; }
+      left: 395px; }
     #choices-container #spock-icon {
       position: absolute;
       margin: 0px;
       top: 350px;
-      left: 90px; }
+      left: 95px; }
     #choices-container #rock-icon {
       position: absolute;
       margin: 0px;
       top: 525px;
-      left: 340px; }
+      left: 345px; }
     #choices-container #lizard-icon {
       position: absolute;
       margin: 0px;
       top: 525px;
-      left: 140px; }
+      left: 145px; }
     #choices-container .icon-container {
       height: 5rem;
       width: 5rem; }
