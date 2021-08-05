@@ -355,6 +355,17 @@ button {
     padding: 0; }
   #choices-container {
     zoom: 60%; }
+    #choices-container #paper-icon {
+      margin-top: 0px; }
+    #choices-container #spock-icon {
+      margin-top: -80px; }
+    #choices-container #rock-icon {
+      margin-top: 100px; }
+    #choices-container #lizard-icon {
+      margin-top: -80px; }
+    #choices-container .icon-container {
+      height: 5rem;
+      width: 5rem; }
   #game-play-container {
     zoom: 60%; }
     #game-play-container #outcome-container {

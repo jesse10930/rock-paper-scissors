@@ -147,6 +147,27 @@
 
   #choices-container {
     zoom: 60%;
+
+    #paper-icon {
+      margin-top: 0px;
+    }
+
+    #spock-icon {
+      margin-top: -80px;
+    }
+
+    #rock-icon {
+      margin-top: 100px;
+    }
+
+    #lizard-icon {
+      margin-top: -80px;
+    }
+
+    .icon-container {
+      height: 5rem;
+      width: 5rem;
+    }
   }
 
   #game-play-container {
