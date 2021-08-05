@@ -41,9 +41,10 @@
 
   #rules-button {
     position: absolute;
-    bottom: 5%;
+    bottom: 0%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
   }
 
   .attribution {
@@ -77,8 +78,9 @@
   }
 
   #game-play-container {
-    display: flex;
+    // display: flex;
     justify-content: space-around;
+
     #your-pick-container {
       position: absolute;
       right: 60%;
@@ -97,7 +99,7 @@
 
       #your-outcome {
         position: absolute;
-        bottom: 125px;
+        bottom: 245px;
         width: 100%;
       }
       #play-again {
@@ -105,6 +107,7 @@
         width: 140%;
         height: 25%;
         font-size: 24px;
+        bottom: 200px;
       }
     }
     #house-pick-container {
@@ -126,14 +129,14 @@
 }
 
 // Small Tablets
-@media (max-width: 600px) {
-  #game-play-container {
-    #outcome-container {
-      position: absolute;
-      top: 320px;
-    }
-  }
-}
+// @media (max-width: 600px) {
+//   #game-play-container {
+//     #outcome-container {
+//       position: absolute;
+//       top: 320px;
+//     }
+//   }
+// }
 
 // Smart Phones
 @media (max-width: 500px) {
@@ -151,7 +154,7 @@
 
     #outcome-container {
       position: absolute;
-      top: 450px;
+      top: 550px;
     }
   }
 

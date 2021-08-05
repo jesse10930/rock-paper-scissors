@@ -289,9 +289,10 @@ button {
       justify-content: space-between; }
   #rules-button {
     position: absolute;
-    bottom: 5%;
+    bottom: 0%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%); }
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1; }
   .attribution {
     display: none; }
   #title-container {
@@ -311,7 +312,6 @@ button {
       #title-container #scoreboard .actual-score {
         font-size: 40px; }
   #game-play-container {
-    display: flex;
     justify-content: space-around; }
     #game-play-container #your-pick-container {
       position: absolute;
@@ -328,13 +328,14 @@ button {
       top: 500px; }
       #game-play-container #outcome-container #your-outcome {
         position: absolute;
-        bottom: 125px;
+        bottom: 245px;
         width: 100%; }
       #game-play-container #outcome-container #play-again {
         position: absolute;
         width: 140%;
         height: 25%;
-        font-size: 24px; }
+        font-size: 24px;
+        bottom: 200px; }
     #game-play-container #house-pick-container {
       height: 330px;
       width: 170px;
@@ -348,11 +349,6 @@ button {
         top: 120px;
         left: 40px; } }
 
-@media (max-width: 600px) {
-  #game-play-container #outcome-container {
-    position: absolute;
-    top: 320px; } }
-
 @media (max-width: 500px) {
   * {
     margin: 0;
@@ -363,6 +359,6 @@ button {
     zoom: 60%; }
     #game-play-container #outcome-container {
       position: absolute;
-      top: 450px; }
+      top: 550px; }
   #rules-button {
     zoom: 60%; } }
